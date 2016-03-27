@@ -14,12 +14,16 @@ public class Valute {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if (naziv == null || naziv == "")
+			System.out.println("Greska");
 		this.naziv = naziv;
 	}
 	public String getSkracenica() {
 		return skracenica;
 	}
 	public void setSkracenica(String skracenica) {
+		if (skracenica == null || skracenica == "")
+			System.out.println("Greska");
 		this.skracenica = skracenica;
 	}
 	public GregorianCalendar getDatum() {
@@ -32,18 +36,24 @@ public class Valute {
 		return prodajni;
 	}
 	public void setProdajni(double prodajni) {
+		if (prodajni <=0)
+			System.out.println("Kurs nije validan");
 		this.prodajni = prodajni;
 	}
 	public double getSrednji() {
 		return srednji;
 	}
 	public void setSrednji(double srednji) {
+		if (srednji <=0)
+			System.out.println("Kurs nije validan");
 		this.srednji = srednji;
 	}
 	public double getKupovni() {
 		return kupovni;
 	}
 	public void setKupovni(double kupovni) {
+		if (kupovni<= 0 )
+			System.out.println("Kurs nije validan");
 		this.kupovni = kupovni;
 	}
 	@Override
